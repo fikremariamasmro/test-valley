@@ -1,0 +1,53 @@
+/* CSS */
+.swiper-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    /* Adjust width as needed */
+    height: 40px;
+    /* Adjust height as needed */
+    background-color: black;
+    /* Black background */
+    color: white;
+    /* Icon color */
+    border-radius: 50%;
+    /* Circular shape */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: '';
+    /* Clear default content */
+    display: block;
+    width: 20px;
+    /* Adjust icon size as needed */
+    height: 20px;
+    /* Adjust icon size as needed */
+    background-image: url('../../public/circle-chevron-left.svg');
+    /* Path to your SVG icon */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* Position the next button on the right */
+.swiper-button-next {
+    font-size: 20px;
+    left: var(--swiper-navigation-sides-offset, 450px);
+    right: auto;
+
+}
+
+/* Position the previous button on the left */
+.swiper-button-prev {
+    right: var(--swiper-navigation-sides-offset, 450px);
+    left: auto;
+}
