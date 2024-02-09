@@ -6,11 +6,11 @@ interface Props {
 
 const SignInButton: React.FC<Props> = ({ onButtonClick }) => {
     return (
-        <button onClick={onButtonClick}>
+        <button onClick={onButtonClick} className='hidden md:flex'>
             <div className="flex gap-2 ">
-                <img src="https://www.testvalley.kr/common/home-event.svg" alt="" />
+                <img src="https://www.testvalley.kr/common/home-event.svg" className='md:w-8' alt="" />
                 <div className="border-l border-gray-300 pt-6 my-6"></div>
-                <span className="py-4 pt-6 text-sm -tracking-6"> 로그인 / 회원가입</span>
+                <span className="py-4 pt-6 text-sm -tracking-6 font-normal"> 로그인 / 회원가입</span>
             </div>
         </button>
     );

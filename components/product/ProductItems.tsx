@@ -14,7 +14,7 @@ const ProductItems: React.FC<any> = ({ items }) => {
             return amount;
     }
     return (
-        <div className='w-[850px]'>
+        <div className='md:w-[850px] w-[300px]  px-4 md:px-0'>
             <Swiper
                 slidesPerView={1}
                 spaceBetween={2}
@@ -45,7 +45,7 @@ const ProductItems: React.FC<any> = ({ items }) => {
             >
                 {items.map((item: any) => (
                     <SwiperSlide key={item.publication.id}>
-                        <div >
+                        <div className=''>
                             <div className="w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-55">
                                 <figure className="relative max-w-sm cursor-pointer">
                                     <a href="#">
@@ -71,7 +71,7 @@ const ProductItems: React.FC<any> = ({ items }) => {
                                 </div>
                                 <p>
                                     <span style={{ color: 'gray', fontSize: '12px' }} >
-                                        &#9733; {item.publication.rating}
+                                        &#9733; {item.publication.rating} {item.publication.preface}
                                     </span>
                                 </p>
 
